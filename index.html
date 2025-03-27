@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumos - 100% Image Compression Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Compress your images up to 100%. Reduce file sizes completely while maintaining control over quality for web, email and social media.">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.svg" alt="Lumos Logo" class="logo-image">
+        <span class="logo-text">Lumos</span>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav-item active">Home</a>
+        <a href="#" class="nav-item">About</a>
+        <a href="#" class="nav-item">Support</a>
+        <a href="#" class="nav-item">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="hero">
+        <img src="logo.svg" alt="Lumos Logo" class="hero-logo">
+        <h1 class="hero-title">File Compressor: Shrink Images Up to 100%</h1>
+        <p class="hero-description">
+          Compress any image file instantly while maintaining maximum quality control. 
+          Perfect for websites, emails, social media, and all digital platforms.
+        </p>
+      </section>
+
+      <div class="tabs">
+        <button class="tab-button active" data-tab="compress">File Compressor</button>
+        <button class="tab-button" data-tab="upscale">File Upscaler</button>
+      </div>
+
+      <div class="app-content">
+        <div id="compress-tab" class="tab-content active">
+          <div class="upload-area">
+            <div class="upload-box" id="dropzone">
+              <div class="upload-icon">📁</div>
+              <h3>Drag & Drop Your Image Here</h3>
+              <p>or</p>
+              <button class="btn btn-primary" id="browse-button">Browse Files</button>
+              <input type="file" id="file-input" accept="image/*" style="display: none;">
+              <p class="upload-info">Maximum file size: 10MB</p>
+            </div>
+          </div>
+
+          <div class="compression-controls hidden" id="compression-controls">
+            <h3>Compression Settings</h3>
+            <div class="quality-slider">
+              <label for="quality-range">Quality: <span id="quality-value">80%</span></label>
+              <input type="range" id="quality-range" min="0" max="100" value="80">
+            </div>
+            <div class="button-group">
+              <button class="btn btn-primary" id="compress-button">Compress Image</button>
+              <button class="btn btn-secondary" id="auto-compress-button">Auto-Compress</button>
+            </div>
+          </div>
+
+          <div class="preview-area hidden" id="preview-area">
+            <h3>Results</h3>
+            <div class="preview-container">
+              <div class="preview-card">
+                <h4>Original</h4>
+                <div class="preview-image-container">
+                  <img src="" alt="Original image" id="original-preview">
+                </div>
+                <div class="preview-info">
+                  <p>Size: <span id="original-size">0 KB</span></p>
+                  <p>Dimensions: <span id="original-dimensions">0 x 0</span></p>
+                </div>
+              </div>
+              <div class="preview-card">
+                <h4>Compressed</h4>
+                <div class="preview-image-container">
+                  <img src="" alt="Compressed image" id="compressed-preview">
+                </div>
+                <div class="preview-info">
+                  <p>Size: <span id="compressed-size">0 KB</span></p>
+                  <p>Saved: <span id="saved-percentage">0%</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="button-group">
+              <button class="btn btn-primary" id="download-button" disabled>Download</button>
+              <button class="btn btn-secondary" id="reset-button">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="upscale-tab" class="tab-content">
+          <div class="upload-area">
+            <div class="upload-box">
+              <div class="upload-icon">📁</div>
+              <h3>Upscale Your Images</h3>
+              <p>Coming soon! Upload low-resolution images and enhance them.</p>
+              <button class="btn btn-primary" disabled>This Feature Is Coming Soon</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <p>100% Free for Personal & Commercial Use • No Account Required • No Watermarks</p>
+        <p>&copy; 2025 Lumos. All rights reserved. <a href="https://github.com/lumos2010/ShrinkRay/blob/main/LICENSE">MIT License</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="loading-modal" id="loading-modal">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p>Processing your image...</p>
+      <p class="loading-note">This may take a few seconds depending on the file size.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
