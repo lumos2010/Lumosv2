@@ -1,0 +1,43 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <filter id="shadowEffect" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+    <clipPath id="roundedRect">
+      <rect x="4" y="4" width="32" height="32" rx="9" />
+    </clipPath>
+  </defs>
+  
+  <!-- Main rounded square with gradient -->
+  <rect x="4" y="4" width="32" height="32" rx="9" fill="url(#bgGradient)" filter="url(#shadowEffect)" />
+  
+  <!-- Subtle pattern overlay -->
+  <rect x="4" y="4" width="32" height="32" rx="9" fill="white" fill-opacity="0.05" />
+  
+  <!-- Light reflection effect (top) -->
+  <path d="M7.5 13C7.5 13 12.5 8 20 8C27.5 8 32.5 13 32.5 13" stroke="white" stroke-width="1" stroke-opacity="0.3" />
+  
+  <!-- Center icon: stylized SR monogram -->
+  <g clip-path="url(#roundedRect)">
+    <!-- S shape -->
+    <path d="M15 15C15 15 17 13 20 13C23 13 25 15 25 17C25 19 23 21 20 21C17 21 15 23 15 25C15 27 17 29 20 29C23 29 25 27 25 27" 
+          stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- R shape -->
+    <path d="M27 13V21M27 13H24C22 13 21 15 21 17C21 19 22 21 24 21H27" 
+          stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M27 21L29 27" stroke="white" stroke-width="2" stroke-linecap="round" />
+  </g>
+  
+  <!-- Compression indicators -->
+  <path d="M7.5 27L11 27L9 25L11 27L9 29" stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M32.5 27L29 27L31 25L29 27L31 29" stroke="#FFFFFF" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Light glare effect -->
+  <circle cx="12" cy="12" r="2" fill="white" fill-opacity="0.3" />
+</svg>
